@@ -11,7 +11,6 @@ import Contact from '../pages/Contact';
 import CustomerAccount from '../pages/CustomerAccount';
 import CustomerAddresses from '../pages/CustomerAddresses';
 import Form from '../pages/Form';
-import Orders from '../pages/Orders';
 import OrderConfirmation from '../pages/OrderConfirmation';
 import Logout from '../pages/Logout';
 // import RegisterForm from '../UI/RegisterForm';

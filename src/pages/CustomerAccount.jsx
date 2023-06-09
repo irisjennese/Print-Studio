@@ -2,8 +2,18 @@ import jaime from "../assets/images/jaime.jpg"
 import Form from "./Form";
 import Form2 from "./Form2";
 import CustomerView from "./CustomerView";
+import { useEffect } from "react";
 
 function CustomerAccount() {
+  useEffect(() => {
+    const token = localStorage.setItem('userToken');
+    if (token){
+    console.log('user is logged in');
+    }else {
+    console.log('user is NOT logged in');
+    }
+    }, []);
+
   return (
     <>
       <div className="search-panel d-none" id="searchPanel">

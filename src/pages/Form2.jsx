@@ -21,17 +21,17 @@ function Form2() {
     <form className="mb-5" onSubmit={formik.handleSubmit}>
                 <div className="row mb-3">
                   <div className="col-sm-6">
-                    <label className="form-label" for="old_password"  >Old password</label>
+                    <label className="form-label" htmlFor="old_password"  >Old password</label>
                     <input className="form-control" id="old_password" type="password" onChange={formik.handleChange} value={formik.values.old_password} />
                   </div>
                 </div>
                 <div className="row gy-3">
                   <div className="col-sm-6">
-                    <label className="form-label" for="new_password">New password</label>
+                    <label className="form-label" htmlFor="new_password">New password</label>
                     <input className="form-control" id="new_password" type="password" onChange={formik.handleChange} value={formik.values.new_password} />
                   </div>
                   <div className="col-sm-6">
-                    <label className="form-label" for="retype_password">Retype new password</label>
+                    <label className="form-label" htmlFor="retype_password">Retype new password</label>
                     <input className="form-control" id="retype_password" type="password" onChange={formik.handleChange} value={formik.values.retype_password} />
                   </div>
                   <div className="col-12 text-center">

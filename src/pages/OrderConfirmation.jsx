@@ -4,7 +4,8 @@ import Helmet from '../components/Helmet/Helmet';
 import { Container, Row, Col } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
 import { cartActions } from '../redux/slices/cartSlice';
-import { px } from 'framer-motion';
+// import { px } from 'framer-motion';
+import CommonSection from '../components/UI/CommonSection';
 
 
 
@@ -37,6 +38,7 @@ const OrderConfirmation = () => {
     return (
         <>
             <Helmet title='OrderConfirmation'>
+                <CommonSection title='Order Details' />
                 <section>
                     <Container >
                         <div>
@@ -71,7 +73,7 @@ const OrderConfirmation = () => {
                             <Col>
                                 <p>
                                     <a data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                        <span className="d-flex align-items-center justify-content-center"><p className="me-3">View Order Details</p><i class="fa-solid fa-chevron-down fa-lg"></i></span>
+                                        <span className="d-flex align-items-center justify-content-center"><p className="me-3">View Order Details</p><i className="fa-solid fa-chevron-down fa-lg"></i></span>
                                     </a>
                                 </p>
                             </Col>

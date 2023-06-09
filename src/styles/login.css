@@ -66,8 +66,13 @@ h6 span{
   border-radius: 50%;
   color: #ffeba7;
   background-color: #1197F5;
+<<<<<<< HEAD
   /* font-family: 'unicons'; */
   /* content: '';
+=======
+  font-family: 'unicons';
+  content: '';
+>>>>>>> 9df5468baef2e418f41bd570d7b6e5b53b7a4222
   z-index: 20;
   top: -10px;
   left: -10px;

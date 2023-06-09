@@ -47,27 +47,27 @@ function Form() {
       <form onSubmit={formik.handleSubmit}>
         <div className="row gy-3">
           <div className="col-sm-6">
-            <label className="form-label" for="firstname" required="required">Firstname</label>
+            <label className="form-label" htmlFor="firstname" required="required">Firstname</label>
             <input className="form-control" id="firstname" required="required" type="text" onChange={formik.handleChange} value={formik.values.firstname} />
           </div>
           <div className="col-sm-6">
-            <label className="form-label" for="lastname" required="required" >Lastname</label>
+            <label className="form-label" htmlFor="lastname" required="required" >Lastname</label>
             <input className="form-control" id="lastname" required="required" type="text" onChange={formik.handleChange} value={formik.values.lastname} />
           </div>
           <div className="col-sm-6">
-            <label className="form-label" for="company" required="required">Company</label>
+            <label className="form-label" htmlFor="company" required="required">Company</label>
             <input className="form-control" id="company" required="required" type="text" />
           </div>
           <div className="col-sm-6">
-            <label className="form-label" for="street" required="required">Street</label>
+            <label className="form-label" htmlFor="street" required="required">Street</label>
             <input className="form-control" id="street" required="required" type="text" onChange={formik.handleChange} value={formik.values.street} />
           </div>
           <div className="col-sm-6 col-md-3">
-            <label className="form-label" for="city" required="required">City</label>
+            <label className="form-label" htmlFor="city" required="required">City</label>
             <input className="form-control" id="city" required="required" type="text" onChange={formik.handleChange} value={formik.values.city} />
           </div>
           <div className="col-sm-6 col-md-3">
-            <label className="form-label" for="zip" required="required">ZIP</label>
+            <label className="form-label" htmlFor="zip" required="required">ZIP</label>
             <input className="form-control" id="zip" required="required" type="text" onChange={formik.handleChange} value={formik.values.zip} />
           </div>
           <div className="col-sm-6 col-md-3">
@@ -81,7 +81,7 @@ function Form() {
           </div>
 
           <div className="col-sm-6 col-md-3">
-            <label className="form-label" for="province" required="required" >Province</label>
+            <label className="form-label" htmlFor="province" required="required" >Province</label>
             <select className="form-check js-country form-control" id="province" required="required" name="province" onChange={formik.handleChange} value={formik.values.province}>
               <option value="">Select Province</option>
               <option value="Abra">Abra</option>
@@ -142,11 +142,11 @@ function Form() {
             </select>
           </div>
           <div className="col-sm-6">
-            <label className="form-label" for="phone" required="required" >Telephone</label>
+            <label className="form-label" htmlFor="phone" required="required" >Telephone</label>
             <input className="form-control" id="phone" required="required" type="text" onChange={formik.handleChange} value={formik.values.phone} />
           </div>
           <div className="col-sm-6">
-            <label className="form-label" for="email" required="required" >Email</label>
+            <label className="form-label" htmlFor="email" required="required" >Email</label>
             <input className="form-control" id="email" required="required" type="email" onChange={formik.handleChange} value={formik.values.email} />
           </div>
           <div className="col-sm-12 text-center">

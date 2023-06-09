@@ -74,11 +74,11 @@ const ProductDetails = () => {
                 <div className='product_rating d-flex align-items-center gap-5 mb-3'>
                   <div>
                     <span>
-                      <i class='ri-star-s-fill'></i>
-                      <i class='ri-star-s-fill'></i>
-                      <i class='ri-star-s-fill'></i>
-                      <i class='ri-star-s-fill'></i>
-                      <i class='ri-star-half-s-line'></i>
+                      <i className='ri-star-s-fill'></i>
+                      <i className='ri-star-s-fill'></i>
+                      <i className='ri-star-s-fill'></i>
+                      <i className='ri-star-s-fill'></i>
+                      <i className='ri-star-half-s-line'></i>
                     </span>
                   </div>
 

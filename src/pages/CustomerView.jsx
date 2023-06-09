@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 function CustomerView() {
     const navigate = useNavigate();
-  const handleLogin = () => {
+  const handleHome = () => {
     navigate('/');
   };
 //   const handleOrderClick = () => {
@@ -25,8 +25,8 @@ function CustomerView() {
                         <FontAwesomeIcon icon={faMapMarker} />
                         Addresses
                     </span></a>
-                <a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="/home">
-                    <span className="fw-normal text-sm text-dark py-1" onClick={handleLogin}>
+                <a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="/logout">
+                    <span className="fw-normal text-sm text-dark py-1" onClick={handleHome}>
                         <FontAwesomeIcon icon={faKey} />Log out</span></a>
             </nav>
 

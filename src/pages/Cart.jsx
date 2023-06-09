@@ -2,25 +2,29 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Helmet from '../components/Helmet/Helmet';
 import { Container, Row, Col } from 'reactstrap';
-import { motion } from 'framer-motion';
-import { cartActions } from '../redux/slices/cartSlice';
 import CommonSection from '../components/UI/CommonSection';
 import { useNavigate } from 'react-router-dom';
+import { cartActions } from '../redux/slices/cartSlice';
+import { motion } from 'framer-motion';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
+  const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleRemoveItem = (index) => {
     dispatch(cartActions.removeItem(index));
-  }
-
-  const navigate = useNavigate();
-  const navigateToCheckOut = () => {
-    navigate('/checkout');
   };
 
+  const navigateToCheckOut = () => {
+    if (user && user.isLoggedIn) {
+      navigate('/checkout');
+    } else {
+      navigate('/login');
+    }
+  };
 
   return (
     <Helmet title='Cart'>
@@ -55,22 +59,27 @@ const Cart = () => {
                           <td>₱{item.price}</td>
                           <td>{item.quantity}</td>
                           <td>
-                          <i className="fa fa-trash" onClick={() => handleRemoveItem(index)} style={{ cursor: 'pointer' }}></i>
+                            <i
+                              className='fa fa-trash'
+                              onClick={() => handleRemoveItem(index)}
+                              style={{ cursor: 'pointer' }}
+                            ></i>
                           </td>
                         </tr>
-                      )
+                      );
                     })}
                   </tbody>
                 </table>
               )}
             </Col>
-
             <Col lg='3'>
               <div className='card'>
                 <div className='card-body'>
                   <h5 className='card-title'>Total Amount:</h5>
                   <h6 className='card-subtitle mb-2 text-muted'>₱{Number(totalAmount).toFixed(2)}</h6>
-                  <button className='btn btn-primary' onClick={navigateToCheckOut}>Proceed to Checkout</button>
+                  <button className='btn btn-primary' onClick={navigateToCheckOut}>
+                    Proceed to Checkout
+                  </button>
                 </div>
               </div>
             </Col>

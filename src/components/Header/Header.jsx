@@ -1,15 +1,13 @@
 import React, { useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './header.css';
-
-
-import { motion } from 'framer-motion';
-
 import logo from '../../assets/images/logo/logo.svg';
-import userIcon from '../../assets/images/user-icon.png';
+// import userIcon from '../../assets/images/user-icon.png';
+// import { motion } from 'framer-motion';
 import { Container, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
 
 const nav_links = [
   {
@@ -24,13 +22,17 @@ const nav_links = [
     path: 'about-us',
     display: 'About Us',
   },
-  // {
-  //   path: 'cart',
-  //   display: 'Cart',
-  // },
   {
     path: 'contact-us',
     display: 'Contact Us',
+  },
+  {
+    path: 'login',
+    display: 'Login', 
+  },
+  {
+    path: 'signup',
+    display: 'Signup', 
   },
 ];
 
@@ -59,15 +61,15 @@ const Header = () => {
 
   const menuToggle = () => menuRef.current.classList.toggle('active_menu');
 
-  
   const navigate = useNavigate();
   const navigateToCart = () => {
     navigate('/cart');
   };
-  const handleProfileClick = () => {
-    navigate('/login');
-  }
 
+  // const handleProfileClick = () => {
+  //   navigate('/login');
+  // }
+ 
   return (
     <header className='header' ref={headerRef}>
       <Container>
@@ -76,7 +78,6 @@ const Header = () => {
             <div className='logo'>
               <img src={logo} alt='logo' />
             </div>
-
             <div className='navigation' ref={menuRef} onClick={menuToggle}>
               <ul className='menu'>
                 {nav_links.map((item, index) => (
@@ -95,27 +96,16 @@ const Header = () => {
             </div>
 
             <div className='nav_icons'>
-              {/* <span className='fav_icon'>
-                <i class='ri-heart-line'></i>
-                <span className='badge'>2</span>
-              </span> */}
               <span className='cart_icon' onClick={navigateToCart}>
                 <i class='ri-shopping-bag-line'></i>
                 <span className='badge'>{totalQuantity}</span>
               </span>
-
-              <span onClick={handleProfileClick}> 
+              {/* <span onClick={handleProfileClick}> 
                 <motion.img
                   whileTap={{ scale: 1.2 }}
                   src={userIcon}
                   alt='usericon'
-                />
-              </span>
-              <div className='mobile_menu'>
-                <span onClick={menuToggle}>
-                  <i class='ri-menu-line'></i>
-                </span>
-              </div>
+                /></span> */}
             </div>
           </div>
         </Row>

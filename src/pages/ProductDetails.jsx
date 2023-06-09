@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-
 import { Container, Row, Col } from 'reactstrap';
 import { useParams } from 'react-router-dom';
 import products from '../assets/data/products';
@@ -18,7 +17,7 @@ const ProductDetails = () => {
   const reviewMsg = useRef('');
   const dispatch = useDispatch();
 
-  const [rating, setRating] = useState(null);
+  const [setRating] = useState(null);
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
 
@@ -37,15 +36,6 @@ const ProductDetails = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
-    const reviewUserName = reviewUser.current.values;
-    const reviewUserMsg = reviewMsg.current.values;
-
-    const reviewObj = {
-      userName: reviewUserName,
-      text: reviewUserMsg,
-      rating,
-    };
 
     toast.success('Review submitted');
   };

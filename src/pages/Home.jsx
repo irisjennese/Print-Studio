@@ -173,7 +173,6 @@ const Home = () => {
                   </div>
                   <div className="flip-card-back">
                     <h3>Jayson Herrera</h3>
-                    <h5>Web Developer</h5>
                   </div>
                 </div>
               </div>
@@ -184,7 +183,6 @@ const Home = () => {
                   </div>
                   <div className="flip-card-back">
                     <h3>Jaime Yanoc</h3>
-                    <h5>Web Developer</h5>
                   </div>
                 </div>
               </div>
@@ -195,7 +193,6 @@ const Home = () => {
                   </div>
                   <div className="flip-card-back">
                     <h3>Marty D. Marbella</h3>
-                    <h5>Web Developer</h5>
                   </div>
                 </div>
               </div>
@@ -206,7 +203,6 @@ const Home = () => {
                   </div>
                   <div className="flip-card-back">
                     <h3>Iris Raymundo</h3>
-                    <h5>Web Developer</h5>
                   </div>
                 </div>
               </div>
